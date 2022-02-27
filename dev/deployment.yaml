@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: wil-playground
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: wil-playground

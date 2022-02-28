@@ -1,12 +1,15 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: wil-playground-service
+ labels:
+ app: wil-playground
+ name: wil-playground
 spec:
-  selector:
-    app: wil-playground
-  ports:
-    - protocol: TCP
-      nodePort: 81
-      port: 8888
-      targetPort: 8888
+ ports:
+  - name: wil-playground
+  nodePort: 81
+  port: 8888
+  protocol: TCP
+  targetPort: 8888
+ selector:
+  app: wil-playground
